@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<style>
+#messages
+{
+font-size:5;
+font-weight:bold;
+line-height:140%;
+}
+#status
+{
+background-color:blue;
+font-size:4;
+font-weight:bold;
+color:white;
+line-height:140%;
+}
+  
+.msgbox{
+      background: whitesmoke;
+	  border: 3px solid black;
+      top: 100%;
+	  left: 15%;
+	  width:12%;
+	  height: 50%;
+      position:absolute;
+      transform: translate(-200px,-200px);
+	   padding: 100px 120px; 
+	  margin: 0;
+	padding: 0;
+  }
+  .hmsgbox{
+      background: whitesmoke;
+	  border: 3px solid black;
+      top: 100%;
+	  left: 27%;
+	  width:12%;
+	  height: 50%;
+      position:absolute;
+      transform: translate(-200px,-200px);
+	   padding: 100px 120px; 
+	  margin: 0;
+	padding: 0;
+  }
+  .mmsgbox{
+      background: whitesmoke;
+	  border: 3px solid black;
+      top: 100%;
+	  left: 39%;
+	  width:12%;
+	  height: 50%;
+      position:absolute;
+      transform: translate(-200px,-200px);
+	   padding: 100px 120px; 
+	  margin: 0;
+	padding: 0;
+  }
+  .fmsgbox{
+      background: whitesmoke;
+	  border: 3px solid black;
+      top: 100%;
+	  left: 51%;
+	  width:12%;
+	  height: 50%;
+      position:absolute;
+      transform: translate(-200px,-200px);
+	   padding: 100px 120px; 
+	  margin: 0;
+	padding: 0;
+  }
+  .memsgbox{
+      background: whitesmoke;
+	  border: 3px solid black;
+      top: 100%;
+	  left: 63%;
+	  width:12%;
+	  height: 50%;
+      position:absolute;
+      transform: translate(-200px,-200px);
+	   padding: 100px 120px; 
+	  margin: 0;
+	padding: 0;
+  }
+  .l1msgbox{
+      background: whitesmoke;
+	  border: 3px solid black;
+      top: 100%;
+	  left: 75%;
+	  width:12%;
+	  height: 50%;
+      position:absolute;
+      transform: translate(-200px,-200px);
+	   padding: 100px 120px; 
+	  margin: 0;
+	padding: 0;
+  }
+  .l2msgbox{
+      background: whitesmoke;
+	  border: 3px solid black;
+      top: 100%;
+	  left: 87%;
+	  width:12%;
+	  height: 50%;
+      position:absolute;
+      transform: translate(-200px,-200px);
+	   padding: 100px 120px; 
+	  margin: 0;
+	padding: 0;
+  }
+  .gmsgbox{
+      background: whitesmoke;
+	  border: 3px solid black;
+      top: 100%;
+	  left: 99%;
+	  width:12%;
+	  height: 50%;
+      position:absolute;
+      transform: translate(-200px,-200px);
+	   padding: 100px 120px; 
+	  margin: 0;
+	padding: 0;
+  }
+  #msg{
+	margin: 15px;
+      padding: 0 0 0 20px;
+	  text-align: top;
+	left: 10%;
+	  font-size: 20px;
+
+  }
+  #msgbtn{
+	margin-top:5px;
+margin-left: 4%;
+  }
+  
+  #btn0{
+margin-top:-240px;
+margin-left: 0%;
+}
+#btn1{
+margin-top:-270px;
+margin-left: 10%;
+}
+#btn2{
+margin-top:-300px;
+margin-left: 20%;
+}
+#btn3{
+margin-top:-325px;
+margin-left: 30%;
+}
+#btn4{
+margin-top:-350px;
+margin-left: 40%;
+}
+#btn5{
+margin-top:-380px;
+margin-left: 50%;
+}
+#btn6{
+	margin-top:-410px;
+margin-left: 60%;
+}
+#btn7{
+	margin-top:-440px;
+margin-left: 90%;
+}
+#btn8{
+	margin-top:-470px;
+margin-left: 80%;
+}
+#btn9{
+	margin-top:-500px;
+margin-left: 70%;
+}
+#load1{
+margin-top:-290px;
+margin-left: 4%;
+}
+#load2{
+margin-top:-350px;
+margin-left: 24%;
+}
+#load3{
+	margin-top:-410px;
+margin-left: 44%;
+}
+#load4{
+margin-top:-465px;
+margin-left: 64%;
+}
+#load5{
+margin-top:-520px;
+margin-left: 84%;
+}
+
+
+#temp{
+margin-top:-78px;
+margin-left: 12%;
+}
+
+#hum{
+margin-top:-106px;
+margin-left: 23%;
+}
+
+#moi{
+margin-top:-134px;
+margin-left: 32%;
+}
+
+#fla{
+margin-top:-163px;
+margin-left: 41%;
+}
+
+#met{
+margin-top:-193px;
+margin-left: 49%;
+}
+
+#lod1{
+margin-top:-223px;
+margin-left: 57%;
+}
+
+#lod2{
+margin-top:-253px;
+margin-left: 67%;
+}
+
+#gas{
+margin-top:-282px;
+margin-left: 77%;
+}
+
+</style>
+  <head>
+    <title>Websockets Using JavaScript MQTT Client</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+ 	<script type = "text/javascript" 
+		 src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		  
+		 <script src="C:\Users\USER\Downloads\handbook-master\handbook-master\assets\js\connection.js" type="text/javascript"></script>
+
+    <script type = "text/javascript">
+
+	function onConnectionLost(){
+	console.log("connection lost");
+	document.getElementById("status").innerHTML = "Connection Lost";
+	document.getElementById("messages").innerHTML ="Connection Lost";
+	connected_flag=0;
+	}
+
+
+
+	function onFailure(message) {
+		console.log("Failed");
+		document.getElementById("messages").innerHTML = "Connection Failed- Retrying";
+        setTimeout(MQTTconnect, reconnectTimeout);
+        }
+
+
+
+		function onMessageArrived(r_message){
+		out_msg="Message received "+r_message.payloadString+"<br>";
+		out_msg=out_msg+"Message received Topic "+r_message.destinationName;
+		console.log(out_msg);
+		if(r_message.destinationName=="flame-value")
+		document.getElementById("fmessages").innerHTML =out_msg;
+		else if(r_message.destinationName=="temperature-value")
+				document.getElementById("messages").innerHTML =out_msg;
+					else if(r_message.destinationName=="moisture-value")
+				document.getElementById("mmessages").innerHTML =out_msg;
+					else if(r_message.destinationName=="meter-value")
+				document.getElementById("memessages").innerHTML =out_msg;
+					else if(r_message.destinationName=="humidity-value")
+				document.getElementById("hmessages").innerHTML =out_msg;
+					else if(r_message.destinationName=="loadcell1-value")
+				document.getElementById("l1messages").innerHTML =out_msg;
+					else if(r_message.destinationName=="loadcell2-value")
+				document.getElementById("l2messages").innerHTML =out_msg;
+					else if(r_message.destinationName=="gassensor-value")
+				document.getElementById("gmessages").innerHTML =out_msg;
+		
+
+		}
+
+
+	function onConnected(recon,url){
+	console.log(" in onConnected " +reconn);
+	}
+
+
+	function onConnect() {
+	document.getElementById("messages").innerHTML ="Connected to "+host +"on port "+port;
+	connected_flag=1;
+	document.getElementById("status").innerHTML = "Connected";
+	console.log("on Connect "+connected_flag);
+	  }
+
+    function MQTTconnect() {
+	document.getElementById("messages").innerHTML ="";
+	var s = host;
+	var p = port;
+	if (p!="")
+	{
+	console.log("ports");
+		port=parseInt(p);
+		console.log("port" +port);
+	}
+	if (s!="")
+	{
+		
+		console.log("host");
+	}
+
+
+	console.log("connecting to "+ host +" "+ port);
+	mqtt = new Paho.MQTT.Client(host,port,"clientjsaaa");
+	var options = {
+        timeout: 3,
+		onSuccess: onConnect,
+		onFailure: onFailure,
+      
+     };
+	
+        mqtt.onConnectionLost = onConnectionLost;
+        mqtt.onMessageArrived = onMessageArrived;
+		mqtt.onConnected = onConnected;
+
+	mqtt.connect(options);
+	return false;
+  
+ 
+	}
+
+
+
+	function sub_topics(){
+		document.getElementById("messages").innerHTML ="";
+		if (connected_flag==0){
+		out_msg="<b>Not Connected so can't subscribe</b>"
+		console.log(out_msg);
+		document.getElementById("messages").innerHTML = out_msg;
+		return false;
+		}
+	var stopic= "temperature-value";
+	console.log("Subscribing to topic ="+stopic);
+	mqtt.subscribe(stopic);
+	return false;
+	}	
+	
+	
+	
+	function sub_topics1(){
+		document.getElementById("hmessages").innerHTML ="";
+		if (connected_flag==0){
+		out_msg="<b>Not Connected so can't subscribe</b>"
+		console.log(out_msg);
+		document.getElementById("hmessages").innerHTML = out_msg;
+		return false;
+		}
+	var stopic= "humidity-value";
+	console.log("Subscribing to topic ="+stopic);
+	mqtt.subscribe(stopic);
+	return false;
+	}	
+	
+	
+	
+	
+	function sub_topics2(){
+		document.getElementById("mmessages").innerHTML ="";
+		if (connected_flag==0){
+		out_msg="<b>Not Connected so can't subscribe</b>"
+		console.log(out_msg);
+		document.getElementById("mmessages").innerHTML = out_msg;
+		return false;
+		}
+	var stopic= "moisture-value";
+	console.log("Subscribing to topic ="+stopic);
+	mqtt.subscribe(stopic);
+	return false;
+	}	
+	
+	
+	
+	
+	function sub_topics3(){
+		document.getElementById("fmessages").innerHTML ="";
+		if (connected_flag==0){
+		out_msg="<b>Not Connected so can't subscribe</b>"
+		console.log(out_msg);
+		document.getElementById("fmessages").innerHTML = out_msg;
+		return false;
+		}
+	var stopic= "flame-value";
+	console.log("Subscribing to topic ="+stopic);
+	mqtt.subscribe(stopic);
+	return false;
+	}	
+	
+	
+	
+	
+	function sub_topics4(){
+		document.getElementById("memessages").innerHTML ="";
+		if (connected_flag==0){
+		out_msg="<b>Not Connected so can't subscribe</b>"
+		console.log(out_msg);
+		document.getElementById("memessages").innerHTML = out_msg;
+		return false;
+		}
+	var stopic= "meter-value";
+	console.log("Subscribing to topic ="+stopic);
+	mqtt.subscribe(stopic);
+	return false;
+	}	
+	
+	
+	
+	
+	function sub_topics5(){
+		document.getElementById("l1messages").innerHTML ="";
+		if (connected_flag==0){
+		out_msg="<b>Not Connected so can't subscribe</b>"
+		console.log(out_msg);
+		document.getElementById("l1messages").innerHTML = out_msg;
+		return false;
+		}
+	var stopic= "loadcell1-value";
+	console.log("Subscribing to topic ="+stopic);
+	mqtt.subscribe(stopic);
+	return false;
+	}	
+	
+	
+	
+	
+	function sub_topics6(){
+		document.getElementById("l2messages").innerHTML ="";
+		if (connected_flag==0){
+		out_msg="<b>Not Connected so can't subscribe</b>"
+		console.log(out_msg);
+		document.getElementById("l2messages").innerHTML = out_msg;
+		return false;
+		}
+	var stopic= "loadcell2-value";
+	console.log("Subscribing to topic ="+stopic);
+	mqtt.subscribe(stopic);
+	return false;
+	}	
+	
+	
+	
+	
+	function sub_topics7(){
+		document.getElementById("gmessages").innerHTML ="";
+		if (connected_flag==0){
+		out_msg="<b>Not Connected so can't subscribe</b>"
+		console.log(out_msg);
+		document.getElementById("gmessages").innerHTML = out_msg;
+		return false;
+		}
+	var stopic= "gassensor-value";
+	console.log("Subscribing to topic ="+stopic);
+	mqtt.subscribe(stopic);
+	return false;
+	}	
+	
+	
+	
+	
+	
+	
+    </script>
+
+  </head>
+  <body>
+		<header id="header">
+				<a class="logo" href="index.html">Home Automation</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+    <h1>CONTROL SWITCH</h1>
+	
+	    <script type = "text/javascript">
+	var connected_flag=0	
+	var mqtt;
+    var reconnectTimeout = 2000;
+	var host="broker.mqtt-dashboard.com";
+	var port=8000;
+
+	</script>
+ 
+<div id="status">Connection Status: Not Connected</div>
+
+</div>
+<br>
+ <form name="connform" action="" onsubmit="return MQTTconnect()">
+<input type="submit" value="Connect to LEO">
+</form>
+
+<form name="subs" action="" onsubmit="return sub_topics()">
+<input type="submit" value="Temperature" id="temp">
+</form> 
+
+
+
+<form name="subs" action="" onsubmit="return sub_topics1()">
+<input type="submit" value="Humidity" id="hum">
+</form> 
+
+
+
+<form name="subs" action="" onsubmit="return sub_topics2()">
+<input type="submit" value="Moisture" id="moi">
+</form> 
+
+
+
+<form name="subs" action="" onsubmit="return sub_topics3()">
+<input type="submit" value="Flame" id="fla">
+</form> 
+
+
+
+
+<form name="subs" action="" onsubmit="return sub_topics4()">
+<input type="submit" value="Meter" id="met">
+</form> 
+
+
+
+
+<form name="subs" action="" onsubmit="return sub_topics5()">
+<input type="submit" value="Loadcell1" id="lod1">
+</form> 
+
+
+
+<form name="subs" action="" onsubmit="return sub_topics6()">
+<input type="submit" value="Loadcell2" id="lod2">
+</form> 
+
+
+
+<form name="subs" action="" onsubmit="return sub_topics7()">
+<input type="submit" value="Gascensor" id="gas">
+</form> 
+<br><br><br>
+
+
+<!-- load 1 -->
+<input type="submit" value="LOAD 1" id="load1" >
+
+<form name="smessage0" action="" onsubmit="return send_message0()">
+	<input type="submit" name="message" value="0" id="btn0">
+</form>
+<form name="smessage1"  action="" onsubmit="return send_message1()">
+			<input type="submit" name="message" value="1" id="btn1" >
+			</form>
+		
+
+
+
+<!-- load 2 -->
+<input type="submit" value="LOAD 2" id="load2" >
+<form name="smessage2" action="" onsubmit="return send_message2()">
+		<input type="submit" name="message" value="2" id="btn2">
+		</form>
+		<form name="smessage3" action="" onsubmit="return send_message3()">
+				<input type="submit" name="message" value="3" id="btn3">
+				</form>
+
+<!-- load 3 -->
+<input type="submit" value="LOAD 3" id="load3" >
+<form name="smessage4" action="" onsubmit="return send_message4()">
+		<input type="submit" name="message" value="4" id="btn4">
+		</form>
+		<form name="smessage5" action="" onsubmit="return send_message5()">
+				<input type="submit" name="message" value="5" id="btn5">
+				</form>
+
+	<!--load 4  -->
+	<input type="submit" value="LOAD 4" id="load4" >
+	<form name="smessage6" action="" onsubmit="return send_message6()">
+			<input type="submit" name="message" value="6" id="btn6">
+			</form>
+			<form name="smessage7" action="" onsubmit="return send_message7()">
+					<input type="submit" name="message" value="7" id="btn7">
+					</form>
+					
+	<!----load 5----->
+	<input type= "submit" value="LOAD 5" id="load5">
+<form name="smessage8" action="" onsubmit="return send_message7()">
+<input type="submit" name="message" value="8" id="btn8">
+</form>	
+<form name="smessage9" action="" onsubmit="return send_message8()">
+	<input type="submit" name="message" value="9" id="btn9">
+					</form>
+
+
+
+<!-- ---------------------------------msg boxss----------------------------------------------->
+
+
+
+
+<div class="msgbox">
+	<input type="submit" value="Temperature :" id="msgbtn">
+	<hr>
+
+	<p id="messages"></p>
+</div>
+
+<div class="hmsgbox">
+	<input type="submit" value="Humidity :" id="msgbtn">
+	<hr>
+
+	<p id="hmessages"></p>
+</div>
+
+<div class="mmsgbox">
+	<input type="submit" value="Moisture :" id="msgbtn">
+	<hr>
+
+	<p id="mmessages"></p>
+</div>
+<div class="fmsgbox">
+	<input type="submit" value="Flame :" id="msgbtn">
+	<hr>
+
+	<p id="fmessages"></p>
+</div>
+<div class="memsgbox">
+	<input type="submit" value="Meter :" id="msgbtn">
+	<hr>
+
+	<p id="memessages"></p>
+</div>
+<div class="l1msgbox">
+	<input type="submit" value="Loadcell1 :" id="msgbtn">
+	<hr>
+
+	<p id="l1messages"></p>
+</div>
+<div class="l2msgbox">
+	<input type="submit" value="loadcell2 :" id="msgbtn">
+	<hr>
+
+	<p id="l2messages"></p>
+</div>
+
+<div class="gmsgbox">
+	<input type="submit" value="Gascensor :" id="msgbtn">
+	<hr>
+
+	<p id="gmessages"></p>
+</div>
+
+  </body>
+</html>
