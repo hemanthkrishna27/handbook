@@ -56,6 +56,25 @@ body {
 ol, ul {
   list-style: none; }
 
+	#sign
+	{
+		width:200%;
+		position:relative;
+		top:100%;
+	
+		
+		
+	}
+#log
+	{
+		width:200%;
+		position:relative;
+		top:100%;
+	
+		
+		
+	}
+
 blockquote, q {
   quotes: none; }
   blockquote:before, blockquote:after, q:before, q:after {
