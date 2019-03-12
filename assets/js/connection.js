@@ -42,7 +42,7 @@ function send_message0(){
 		document.getElementById("message").innerHTML = out_msg;
 		return false;
 		}
-		var msg = document.forms["smessage0"]["message"].value;
+		var msg = "1";
 		console.log(msg);
 
 		var topic = "inTopic";
@@ -62,7 +62,7 @@ function send_message0(){
 		document.getElementById("messages").innerHTML = out_msg;
 		return false;
 		}
-		var msg = document.forms["smessage1"]["message"].value;
+		var msg = "0";
 		console.log(msg);
 
 		var topic = "inTopic";
@@ -82,7 +82,7 @@ function send_message0(){
 		document.getElementById("messages").innerHTML = out_msg;
 		return false;
 		}
-		var msg = document.forms["smessage2"]["message"].value;
+		var msg ="2";
 		console.log(msg);
 
 		var topic = "inTopic";
@@ -102,7 +102,7 @@ function send_message0(){
 		document.getElementById("messages").innerHTML = out_msg;
 		return false;
 		}
-		var msg = document.forms["smessage3"]["message"].value;
+		var msg ="3";
 		console.log(msg);
 
 		var topic = "inTopic";
@@ -122,7 +122,7 @@ function send_message0(){
 		document.getElementById("messages").innerHTML = out_msg;
 		return false;
 		}
-		var msg = document.forms["smessage4"]["message"].value;
+		var msg = "4";
 		console.log(msg);
 
 		var topic = "inTopic";
@@ -142,7 +142,7 @@ function send_message0(){
 		document.getElementById("messages").innerHTML = out_msg;
 		return false;
 		}
-		var msg = document.forms["smessage5"]["message"].value;
+		var msg = "5";
 		console.log(msg);
 
 		var topic = "inTopic";
@@ -162,7 +162,7 @@ function send_message0(){
 		document.getElementById("messages").innerHTML = out_msg;
 		return false;
 		}
-		var msg = document.forms["smessage6"]["message"].value;
+		var msg = "6";
 		console.log(msg);
 
 		var topic = "inTopic";
@@ -182,7 +182,7 @@ function send_message0(){
 		document.getElementById("messages").innerHTML = out_msg;
 		return false;
 		}
-		var msg = document.forms["smessage7"]["message"].value;
+		var msg ="7";
 		console.log(msg);
 
 		var topic = "inTopic";
@@ -202,7 +202,7 @@ function send_message0(){
 		document.getElementById("messages").innerHTML = out_msg;
 		return false;
 		}
-		var msg = document.forms["smessage8"]["message"].value;
+		var msg = "8";
 		console.log(msg);
 
 		var topic = "inTopic";
@@ -222,7 +222,7 @@ function send_message0(){
 		document.getElementById("messages").innerHTML = out_msg;
 		return false;
 		}
-		var msg = document.forms["smessage9"]["message"].value;
+		var msg = "9";
 		console.log(msg);
 
 		var topic = "inTopic";
